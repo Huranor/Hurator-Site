@@ -1,7 +1,3 @@
-// Here we're just passing our github name
-// Update stats every 5 minutes
-// setTimeout(() => parseRepositories("GolemIron"), 1000 * 60 * 5);
-
 const API_LINK = "https://api.github.com/users/";
 
 const API_PULLS = `https://api.github.com/repos/%user/%repo/pulls`
@@ -21,7 +17,8 @@ function parseRepositories(ownerName) {
 
             repos.forEach(rep => {
                 let name = rep.name;
-                let description = rep.description != null ? rep.description : "Здесь я не придумал описания :)";
+                let description = rep.description != null ? rep.description : "Для этого репозитория не предоставлено описания.. Но зато есть вкусная печенька --> 🍪";
+
 
                 if (description.length > 90) {
                     description = description.substring(0, 77) + "..."
